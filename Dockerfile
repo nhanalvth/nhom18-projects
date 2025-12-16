@@ -8,7 +8,8 @@ RUN ls -la /app/target/
 
 FROM eclipse-temurin:17.0.6_10-jdk
 WORKDIR /app
-# Thay đổi tên tệp JAR ở đây
+# Thay đổi tên tệp JAR ở đây .
+
 COPY --from=build /app/target/devops-integration.jar /app/
 EXPOSE 8080
 CMD ["java", "-jar", "devops-integration.jar"]
